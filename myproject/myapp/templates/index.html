@@ -1,0 +1,20 @@
+{%   extends  'base.html'   %}
+{% block title  %}
+
+<h1>index page</h1>
+{% endblock %}
+
+{% block content %}
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Home page of website</p>
+  {{ uname }}
+
+  {{ email }}
+  {{ color }}
+{% for c in color %}
+        {{ c }}
+
+ {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+
+{%   extends  'base.html'   %}
+{% block title  %}
+
+<h1>about page</h1>
+{% endblock %}
+
+{% block content  %}
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Signup page </p>
+
+  <form action="{% url 'regurl'  %}",  method="POST" >
+    {%  csrf_token %}
+
+   Name: <input type="text" name="uname" />
+<br>
+    Email<input type="text" name="email" />
+<br>
+    Password<input type="password" name="pass" />
+<br>
+   Re enter the Password <input type="password" name="repass" />
+
+
+
+   <input type="submit" name="submit">
+
+  </form>
+
+</div>
+
+{% endblock %}
